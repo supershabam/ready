@@ -40,12 +40,12 @@ myClass.ready(true);
 
 // Adding a new callback once we're already ready gets executed immediately
 myClass.ready(function() {
-  console.log('I came late to the party, but I want to execute too!');
+  console.log('I came late to the party, but I will still execute.');
 });
 
 // Ok, you can set the ready state to false now as well... for whatever reason
 myClass.ready(false);
 myClass.ready(function() {
-  console.log('I will not fire until you set ready to true again');
+  console.log('I will not fire until you set ready to true again. Why you set it to false is beyond me.');
 });
 ```
