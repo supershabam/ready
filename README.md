@@ -17,6 +17,7 @@ var Ready = require('ready')
   , util  = require('util')
   ;
 
+// example class that uses Ready
 function MyClass() {
   Ready.call(this); // Call Ready constructor for proper inheritance
 }
@@ -46,6 +47,6 @@ myClass.ready(function() {
 // Ok, you can set the ready state to false now as well... for whatever reason
 myClass.ready(false);
 myClass.ready(function() {
-  console.log('I will not fire until you set ready to true again. Why you set it to false is beyond me.');
+  console.log('I will not fire until you set ready to true again.');
 });
 ```
