@@ -9,24 +9,22 @@ Events are great. You should use events, but not for signaling ready! Ready impl
 This is a module for everyone who has bound an event handler.on('ready', function() {}) that doesn't execute because you added the handler after the 'ready' event already fired.
 
 ## Warning
-If you use Ready for inheritance, you must have 'ready', '_ready', and '_readyCallbacks' available on your class. Ready will stomp on these variables if you're trying to use them in your class.
+If you use this mixin, you must have 'ready', '_ready', and '_readyCallbacks' available on your class. Ready will stomp on these variables if you're trying to use them in your class.
 
 ## Example
 ```javascript
-var Ready = require('ready')
-  , util  = require('util')
-  ;
+var ready = require('ready');
 
 // example class that uses Ready
 function MyClass() {
-  Ready.call(this); // Call Ready constructor for proper inheritance
+  this.someProperty = 'some value';
 }
-util.inherits(MyClass, Ready); // Add Ready methods
+ready.mixin(MyClass.prototype);
 
 // Normal class prototype functions
 MyClass.prototype.doSomeWork = function() {}; 
 
-// Create a new class that uses Ready
+// Create a new class that uses ready mixin
 var myClass = new MyClass();
 
 // Add callback for when myClass is ready
