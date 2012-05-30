@@ -2,7 +2,7 @@
   "author": "Ian Hansen",
   "name": "ready",
   "description": "Mixin to add one-time ready event callback handler",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/SuperShabam/ready",
   "repository": {
     "type": "git",
