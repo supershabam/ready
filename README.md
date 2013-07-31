@@ -1,6 +1,8 @@
 ready
 =====
 
+[![Build Status](https://travis-ci.org/supershabam/ready.png)](https://travis-ci.org/supershabam/ready)
+
 NodeJS mixin to add one-time ready event
 
 ## Purpose
