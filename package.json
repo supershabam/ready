@@ -1,23 +1,31 @@
 {
-  "author": "Ian Hansen",
   "name": "ready",
-  "description": "Mixin to add one-time ready event callback handler",
-  "version": "0.1.0",
-  "homepage": "https://github.com/SuperShabam/ready",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/SuperShabam/ready.git"
-  },
-  "engines": {
-    "node": ">=0.6.10"
+  "version": "0.1.1",
+  "description": "mixin to add one-time ready event callback handler",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   },
   "dependencies": {},
   "devDependencies": {
-    "should": "~0.6.3",
-    "mocha": "~1.0.3"
+    "mocha": "~1.12.0",
+    "should": "~0.6.3"
   },
-  "optionalDependencies": {},
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/supershabam/ready"
+  },
+  "keywords": [
+    "ready",
+    "once",
+    "event"
+  ],
+  "author": "Ian Hansen <ian@supershabam.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supershabam/ready/issues"
   }
 }
