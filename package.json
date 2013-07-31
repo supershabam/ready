@@ -6,9 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "should": "~0.6.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "~1.12.0",
     "should": "~0.6.3"
