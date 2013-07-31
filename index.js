@@ -15,6 +15,9 @@ function ready(flagOrFunction) {
   }
 }
 
-exports.mixin = function(object) {
+function mixin(object) {
   object.ready = ready;
-};
+}
+
+module.exports = mixin;
+module.exports.mixin = mixin;

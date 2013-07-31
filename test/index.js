@@ -25,6 +25,13 @@ describe('inherits', function() {
     anotherClass.should.have.property('_readyCallbacks').with.length(1);
     someClass.should.have.property('_readyCallbacks').with.length(2);
   });
+
+  it('should ready(obj) directly work', function () {
+    var foo = {};
+    should.not.exist(foo.ready);
+    ready(foo);
+    foo.ready.should.be.a('function');
+  });
 });
 
 describe('ready', function() {
