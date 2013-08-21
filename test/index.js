@@ -67,4 +67,13 @@ describe('ready', function() {
       done();
     }, 10);
   });
+
+  it('should support chained mode', function(done) {
+    // it useful for `ready(obj).ready(fn).on('foo', fn).once('bar', fn);`
+    var obj = ready({});
+    obj.ready(false)
+    .ready(done)
+    .ready(false)
+    .ready(true);
+  });
 });
