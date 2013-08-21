@@ -13,10 +13,12 @@ function ready(flagOrFunction) {
       process.nextTick(callback);
     });
   }
+  return this;
 }
 
 function mixin(object) {
   object.ready = ready;
+  return object;
 }
 
 module.exports = mixin;
