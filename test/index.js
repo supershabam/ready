@@ -51,7 +51,17 @@ describe('ready', function() {
     });
     someClass.ready(true);
   });
+	
+  it('should return a promise that resolves when ready if no args are passed', function(done) {
 
+    someClass.ready(false);
+		someClass.ready().then(function(){
+			done();	
+		});
+    someClass.ready(true);
+		
+  });
+	
   it('should immediatly call callback when already ready', function(done) {
     someClass.ready(function() {
       done();
@@ -67,4 +77,5 @@ describe('ready', function() {
       done();
     }, 10);
   });
+
 });
