@@ -7,13 +7,9 @@ function ready(flagOrFunction) {
 	if ( typeof flagOrFunction == 'undefined' ) {
 		
 		var result = when.defer() ;
-		
 		this.ready(function(){
-			
 			result.resolve();
-			
 		});
-		
 		return result.promise ;
 		
 	} else {
