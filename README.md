@@ -49,4 +49,9 @@ myClass.ready(false);
 myClass.ready(function() {
   console.log('I will not fire until you set ready to true again.');
 });
+
+// If you call ready() without any arguments, it will return a  Promises/A+ compliant promise that will resolve when ready
+myClass.ready().then(function(){}).then(null,function(err){});
+require('when').all([ myClass.ready() , someOtherPromise ]).then(function(){},function(){})
+
 ```
