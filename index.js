@@ -7,9 +7,13 @@ function ready(flagOrFunction) {
 	if ( typeof flagOrFunction == 'undefined' ) {
 		
 		var result = when.defer() ;
-		this.ready(function(){
-			result.resolve();
-		});
+		if (this._ready) {
+			result.resolve() ;
+		} else {
+			this.ready(function(){
+				result.resolve();
+			});
+		}
 		return result.promise ;
 		
 	} else {
