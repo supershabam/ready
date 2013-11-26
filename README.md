@@ -11,7 +11,7 @@ Events are great. You should use events, but not for signaling ready! Ready impl
 This is a module for everyone who has bound an event handler.on('ready', function() {}) that doesn't execute because you added the handler after the 'ready' event already fired.
 
 ## Warning
-If you use this mixin, you must have 'ready', '_ready', and '_readyCallbacks' available on your class. Ready will stomp on these variables if you're trying to use them in your class.
+If you use this mixin, you must have 'ready', '\_ready', and '\_readyCallbacks' available on your class. Ready will stomp on these variables if you're trying to use them in your class.
 
 ## Example
 ```javascript
